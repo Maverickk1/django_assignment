@@ -19,7 +19,7 @@ def home(request):
 
 @api_view(['GET'])
 def byid(request,id):
-    students=Student.objects.get(pk=id)
+    students=Student.objects.get(id=id)
     s=StudentSerializer(students)
     return Response(s.data)
 
